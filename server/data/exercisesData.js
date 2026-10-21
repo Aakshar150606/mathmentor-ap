@@ -1,0 +1,371 @@
+// server/data/exercisesData.js
+// STRICT RESTRICTION: Based ONLY on AP Govt Mathematics Class 10 Semester 1, Chapter 1 – REAL NUMBERS (Pages 23–24, 28–29)
+
+const exercisesData = [
+  // Exercise 1.1
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 1,
+    subPart: "(i)",
+    sourcePage: "23",
+    questionText: "Express 140 as a product of its prime factors.",
+    solutionText: "140 = 2 × 70 = 2 × 2 × 35 = 2 × 2 × 5 × 7 = 2² × 5 × 7",
+    mathSteps: [
+      "Divide 140 by 2 ⟹ 70",
+      "Divide 70 by 2 ⟹ 35",
+      "Divide 35 by 5 ⟹ 7",
+      "Prime factors in ascending order: 2² × 5 × 7"
+    ],
+    teachingApproach: "Guide students to start with smallest prime 2, then move to 5 and 7. Remind them to write in exponential form.",
+    commonPitfalls: "Writing 4 × 35 instead of prime powers (4 is composite, not prime).",
+    orderIndex: 1
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 1,
+    subPart: "(ii)",
+    sourcePage: "23",
+    questionText: "Express 156 as a product of its prime factors.",
+    solutionText: "156 = 2 × 78 = 2 × 2 × 39 = 2² × 3 × 13",
+    mathSteps: [
+      "Divide 156 by 2 ⟹ 78",
+      "Divide 78 by 2 ⟹ 39",
+      "Divide 39 by 3 ⟹ 13 (prime)",
+      "Exponential form: 2² × 3 × 13"
+    ],
+    teachingApproach: "Point out 39: sum of digits is 3+9=12, divisible by 3.",
+    commonPitfalls: "Students stopping at 39 thinking it is prime.",
+    orderIndex: 2
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 1,
+    subPart: "(iii)",
+    sourcePage: "23",
+    questionText: "Express 3825 as a product of its prime factors.",
+    solutionText: "3825 = 3 × 1275 = 3 × 3 × 425 = 3² × 5 × 85 = 3² × 5² × 17",
+    mathSteps: [
+      "Sum of digits: 3+8+2+5 = 18 ⟹ Divisible by 3",
+      "3825 / 3 = 1275; 1275 / 3 = 425",
+      "425 / 5 = 85; 85 / 5 = 17 (prime)",
+      "Result: 3² × 5² × 17"
+    ],
+    teachingApproach: "Teach divisibility tests before factorising large numbers: check sum of digits for 3 before dividing by 5.",
+    commonPitfalls: "Dividing by 5 first and getting primes in disordered sequence.",
+    orderIndex: 3
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 1,
+    subPart: "(iv)",
+    sourcePage: "23",
+    questionText: "Express 5005 as a product of its prime factors.",
+    solutionText: "5005 = 5 × 1001 = 5 × 7 × 143 = 5 × 7 × 11 × 13",
+    mathSteps: [
+      "Divide 5005 by 5 ⟹ 1001",
+      "Test 7: 1001 / 7 = 143",
+      "Test 11: 143 / 11 = 13 (prime)",
+      "Result: 5 × 7 × 11 × 13"
+    ],
+    teachingApproach: "1001 is a famous number: 7 × 11 × 13. Highlight this prime trio to students as a fun pattern.",
+    commonPitfalls: "Students giving up at 1001 thinking it is a prime number.",
+    orderIndex: 4
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 1,
+    subPart: "(v)",
+    sourcePage: "23",
+    questionText: "Express 7429 as a product of its prime factors.",
+    solutionText: "7429 = 17 × 437 = 17 × 19 × 23",
+    mathSteps: [
+      "Test primes 2, 3, 5, 7, 11, 13 (none divide 7429)",
+      "7429 / 17 = 437",
+      "437 / 19 = 23 (prime)",
+      "Result: 17 × 19 × 23"
+    ],
+    teachingApproach: "Advise patience: remind students that some numbers have higher prime factors (17, 19, 23).",
+    commonPitfalls: "Stopping after testing up to 13 and assuming 7429 is prime.",
+    orderIndex: 5
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 2,
+    subPart: "(i)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 26 and 91 and verify that LCM × HCF = product of the two numbers.",
+    solutionText: "26 = 2 × 13; 91 = 7 × 13. HCF = 13; LCM = 2 × 7 × 13 = 182. Verification: HCF × LCM = 13 × 182 = 2366. Product = 26 × 91 = 2366.",
+    mathSteps: [
+      "26 = 2¹ × 13¹, 91 = 7¹ × 13¹",
+      "HCF = 13¹ = 13",
+      "LCM = 2¹ × 7¹ × 13¹ = 182",
+      "HCF × LCM = 13 × 182 = 2366",
+      "Product = 26 × 91 = 2366 (Verified equal!)"
+    ],
+    teachingApproach: "Show two parallel columns on the board: left column for HCF × LCM, right column for product of numbers.",
+    commonPitfalls: "Arithmetic errors in multi-digit multiplication.",
+    orderIndex: 6
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 2,
+    subPart: "(ii)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 510 and 92 and verify that LCM × HCF = product of the two numbers.",
+    solutionText: "510 = 2 × 3 × 5 × 17; 92 = 2² × 23. HCF = 2; LCM = 2² × 3 × 5 × 17 × 23 = 23460. HCF × LCM = 2 × 23460 = 46920. Product = 510 × 92 = 46920.",
+    mathSteps: [
+      "510 = 2 × 3 × 5 × 17",
+      "92 = 2² × 23",
+      "HCF = 2¹ = 2",
+      "LCM = 2² × 3 × 5 × 17 × 23 = 23,460",
+      "HCF × LCM = 2 × 23,460 = 46,920",
+      "Product = 510 × 92 = 46,920 (Verified equal!)"
+    ],
+    teachingApproach: "Highlight that only 2 is common between 510 and 92.",
+    commonPitfalls: "Forgetting to take 2² for LCM.",
+    orderIndex: 7
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 2,
+    subPart: "(iii)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 336 and 54 and verify that LCM × HCF = product of the two numbers.",
+    solutionText: "336 = 2⁴ × 3 × 7; 54 = 2 × 3³. HCF = 2 × 3 = 6; LCM = 2⁴ × 3³ × 7 = 3024. HCF × LCM = 6 × 3024 = 18144. Product = 336 × 54 = 18144.",
+    mathSteps: [
+      "336 = 2⁴ × 3¹ × 7¹",
+      "54 = 2¹ × 3³",
+      "HCF = 2¹ × 3¹ = 6",
+      "LCM = 2⁴ × 3³ × 7¹ = 16 × 27 × 7 = 3,024",
+      "HCF × LCM = 6 × 3,024 = 18,144",
+      "Product = 336 × 54 = 18,144 (Verified equal!)"
+    ],
+    teachingApproach: "Compare powers: 2¹ vs 2⁴ (HCF takes 2¹, LCM takes 2⁴); 3¹ vs 3³ (HCF takes 3¹, LCM takes 3³).",
+    commonPitfalls: "Mixing up which power goes to HCF vs LCM.",
+    orderIndex: 8
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 3,
+    subPart: "(i)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 12, 15 and 21 by applying the prime factorisation method.",
+    solutionText: "12 = 2² × 3; 15 = 3 × 5; 21 = 3 × 7. HCF = 3; LCM = 2² × 3 × 5 × 7 = 420.",
+    mathSteps: [
+      "12 = 2² × 3¹",
+      "15 = 3¹ × 5¹",
+      "21 = 3¹ × 7¹",
+      "Common prime to all three: 3 ⟹ HCF = 3",
+      "All primes: 2², 3¹, 5¹, 7¹ ⟹ LCM = 4 × 3 × 5 × 7 = 420"
+    ],
+    teachingApproach: "Remind students: do NOT verify HCF × LCM = product of 3 numbers (because it does not hold!).",
+    commonPitfalls: "Students multiplying HCF × LCM and wondering why it doesn't match 12 × 15 × 21.",
+    orderIndex: 9
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 3,
+    subPart: "(ii)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 17, 23 and 29 by applying the prime factorisation method.",
+    solutionText: "17, 23 and 29 are all prime numbers. HCF = 1; LCM = 17 × 23 × 29 = 11,339.",
+    mathSteps: [
+      "17 = 1 × 17",
+      "23 = 1 × 23",
+      "29 = 1 × 29",
+      "No common prime factor ⟹ HCF = 1",
+      "LCM = 17 × 23 × 29 = 11,339"
+    ],
+    teachingApproach: "Teach that when numbers are mutually coprime/prime, HCF is always 1 and LCM is their product.",
+    commonPitfalls: "Writing HCF = 0 instead of 1.",
+    orderIndex: 10
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 3,
+    subPart: "(iii)",
+    sourcePage: "23",
+    questionText: "Find the LCM and HCF of 8, 9 and 25 by applying the prime factorisation method.",
+    solutionText: "8 = 2³; 9 = 3²; 25 = 5². No common prime factor. HCF = 1; LCM = 2³ × 3² × 5² = 8 × 9 × 25 = 1800.",
+    mathSteps: [
+      "8 = 2³",
+      "9 = 3²",
+      "25 = 5²",
+      "HCF = 1 (no common prime)",
+      "LCM = 8 × 9 × 25 = 1,800"
+    ],
+    teachingApproach: "Show that even though 8, 9, 25 are all composite numbers, they are mutually coprime!",
+    commonPitfalls: "Assuming only prime numbers can be coprime.",
+    orderIndex: 11
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 4,
+    subPart: "",
+    sourcePage: "24",
+    questionText: "Given that HCF(306, 657) = 9, find LCM(306, 657).",
+    solutionText: "Using HCF × LCM = a × b: LCM = (306 × 657) / 9 = 34 × 657 = 22,338.",
+    mathSteps: [
+      "Formula: HCF(a, b) × LCM(a, b) = a × b",
+      "LCM(306, 657) = (306 × 657) / 9",
+      "Simplify 306 / 9 = 34",
+      "34 × 657 = 22,338"
+    ],
+    teachingApproach: "Advise simplifying first (divide 306 by 9 = 34) rather than multiplying 306 × 657 first.",
+    commonPitfalls: "Long multiplication errors by multiplying first instead of simplifying.",
+    orderIndex: 12
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 5,
+    subPart: "",
+    sourcePage: "24",
+    questionText: "Check whether 6ⁿ can end with the digit 0 for any natural number n.",
+    solutionText: "If 6ⁿ ends with 0, it must be divisible by 5. But 6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ. Prime factors of 6ⁿ are only 2 and 3. By uniqueness of FTA, 5 cannot occur. Hence 6ⁿ cannot end with digit 0.",
+    mathSteps: [
+      "Divisibility rule: Terminal 0 requires prime factor 5",
+      "6ⁿ = (2 × 3)ⁿ = 2ⁿ × 3ⁿ",
+      "Prime factors are only 2 and 3",
+      "By FTA uniqueness, no other primes exist (5 is absent)",
+      "Conclusion: 6ⁿ cannot end with digit 0 for any n ∈ ℕ"
+    ],
+    teachingApproach: "Directly parallel this to Example 1 (4ⁿ). Have students compare side-by-side.",
+    commonPitfalls: "Omitting the explicit reference to 'uniqueness of Fundamental Theorem of Arithmetic'.",
+    orderIndex: 13
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 6,
+    subPart: "",
+    sourcePage: "24",
+    questionText: "Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+    solutionText: "Part 1: 7×11×13 + 13 = 13(7×11 + 1) = 13(77 + 1) = 13 × 78. Since it has factors other than 1 and itself, it is composite. Part 2: 7×6×5×4×3×2×1 + 5 = 5(7×6×4×3×2×1 + 1) = 5(5040/5 + 1) = 5(1008 + 1) = 5 × 1009. Having factor 5 makes it composite.",
+    mathSteps: [
+      "Expression 1: 7 × 11 × 13 + 13 = 13 × (77 + 1) = 13 × 78",
+      "78 = 2 × 3 × 13 ⟹ Expression has factors 2, 3, 13 (composite)",
+      "Expression 2: 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 = 5 × (1008 + 1) = 5 × 1009",
+      "Since 5 is a factor and the number > 5, it has more than two factors ⟹ composite"
+    ],
+    teachingApproach: "Teach students to factor out the common term (13 and 5) instead of evaluating the full arithmetic value.",
+    commonPitfalls: "Multiplying everything out into huge numbers and struggling to factorise.",
+    orderIndex: 14
+  },
+  {
+    exerciseNumber: "Exercise 1.1",
+    questionNumber: 7,
+    subPart: "",
+    sourcePage: "24",
+    questionText: "There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+    solutionText: "They meet at the starting point after LCM(18, 12) minutes. 18 = 2 × 3²; 12 = 2² × 3. LCM = 2² × 3² = 36 minutes.",
+    mathSteps: [
+      "Sonia round time = 18 min",
+      "Ravi round time = 12 min",
+      "Reunion at start requires common multiple ⟹ LCM(18, 12)",
+      "18 = 2¹ × 3², 12 = 2² × 3¹",
+      "LCM = 2² × 3² = 4 × 9 = 36 minutes"
+    ],
+    teachingApproach: "Use our interactive track demonstration. Sonia completes 2 laps and Ravi completes 3 laps.",
+    commonPitfalls: "Calculating HCF(18, 12) = 6 minutes (physically impossible as neither has finished 1 lap).",
+    orderIndex: 15
+  },
+
+  // Exercise 1.2
+  {
+    exerciseNumber: "Exercise 1.2",
+    questionNumber: 1,
+    subPart: "",
+    sourcePage: "28",
+    questionText: "Prove that √5 is irrational.",
+    solutionText: "Assume √5 is rational = a/b (coprime, b ≠ 0). 5b² = a² ⟹ 5 | a² ⟹ 5 | a. Let a = 5c ⟹ 5b² = 25c² ⟹ b² = 5c² ⟹ 5 | b² ⟹ 5 | b. Common factor 5 contradicts coprimality. Hence √5 is irrational.",
+    mathSteps: [
+      "Assume √5 = a/b, where a, b are coprime integers, b ≠ 0",
+      "b√5 = a ⟹ 5b² = a²",
+      "5 divides a² ⟹ 5 divides a (by Theorem 1.3)",
+      "Let a = 5c for some integer c",
+      "5b² = (5c)² = 25c² ⟹ b² = 5c²",
+      "5 divides b² ⟹ 5 divides b",
+      "Both a and b have 5 as a common factor, contradicting that a and b are coprime",
+      "Conclusion: √5 is irrational"
+    ],
+    teachingApproach: "Show that this proof is identical to Theorem 1.4 (√2) and Example 5 (√3) with number 5 replacing 2 and 3.",
+    commonPitfalls: "Writing a = 5c but squaring it to 5c² instead of 25c².",
+    orderIndex: 16
+  },
+  {
+    exerciseNumber: "Exercise 1.2",
+    questionNumber: 2,
+    subPart: "",
+    sourcePage: "28",
+    questionText: "Prove that 3 + 2√5 is irrational.",
+    solutionText: "Assume 3 + 2√5 = a/b (coprime, b ≠ 0). 2√5 = a/b - 3 = (a - 3b)/b ⟹ √5 = (a - 3b)/(2b). Since a, b, 3, 2 are integers, (a - 3b)/(2b) is rational, meaning √5 is rational. Contradiction! Hence 3 + 2√5 is irrational.",
+    mathSteps: [
+      "Assume 3 + 2√5 = a/b (where a, b are coprime integers, b ≠ 0)",
+      "2√5 = a/b − 3",
+      "2√5 = (a − 3b) / b",
+      "√5 = (a − 3b) / (2b)",
+      "Since a, b are integers, (a − 3b)/(2b) is rational ⟹ √5 is rational",
+      "This contradicts the fact that √5 is irrational",
+      "Hence, 3 + 2√5 is irrational"
+    ],
+    teachingApproach: "Emphasize radical isolation. Do NOT square both sides.",
+    commonPitfalls: "Students trying to square 3 + 2√5 and creating a messy quadratic with radicals.",
+    orderIndex: 17
+  },
+  {
+    exerciseNumber: "Exercise 1.2",
+    questionNumber: 3,
+    subPart: "(i)",
+    sourcePage: "29",
+    questionText: "Prove that 1/√2 is irrational.",
+    solutionText: "Assume 1/√2 = a/b (coprime, b ≠ 0). Inverting gives √2 = b/a. Since a, b are integers (a ≠ 0), b/a is rational. Contradicts that √2 is irrational. Hence 1/√2 is irrational.",
+    mathSteps: [
+      "Assume 1/√2 = a/b (coprime, b ≠ 0, a ≠ 0)",
+      "Inverting both sides: √2 = b/a",
+      "Since a and b are integers, b/a is rational ⟹ √2 is rational",
+      "This contradicts the fact that √2 is irrational",
+      "Hence, 1/√2 is irrational"
+    ],
+    teachingApproach: "Show how a simple inversion solves the entire proof in 3 lines.",
+    commonPitfalls: "Rationalizing denominator first (giving √2/2) which is also fine, but inversion is even faster.",
+    orderIndex: 18
+  },
+  {
+    exerciseNumber: "Exercise 1.2",
+    questionNumber: 3,
+    subPart: "(ii)",
+    sourcePage: "29",
+    questionText: "Prove that 7√5 is irrational.",
+    solutionText: "Assume 7√5 = a/b (coprime, b ≠ 0). √5 = a / (7b). Since a, 7, b are integers, a/(7b) is rational. Contradicts that √5 is irrational. Hence 7√5 is irrational.",
+    mathSteps: [
+      "Assume 7√5 = a/b (coprime, b ≠ 0)",
+      "Divide by 7: √5 = a / (7b)",
+      "Since a, 7, b are integers, a/(7b) is rational",
+      "Contradicts that √5 is irrational",
+      "Hence, 7√5 is irrational"
+    ],
+    teachingApproach: "Directly parallel with Example 7 (3√2).",
+    commonPitfalls: "Confusing 7√5 with 7 + √5.",
+    orderIndex: 19
+  },
+  {
+    exerciseNumber: "Exercise 1.2",
+    questionNumber: 3,
+    subPart: "(iii)",
+    sourcePage: "29",
+    questionText: "Prove that 6 + √2 is irrational.",
+    solutionText: "Assume 6 + √2 = a/b (coprime, b ≠ 0). √2 = a/b - 6 = (a - 6b)/b. Since a, 6, b are integers, (a - 6b)/b is rational. Contradicts that √2 is irrational. Hence 6 + √2 is irrational.",
+    mathSteps: [
+      "Assume 6 + √2 = a/b (coprime, b ≠ 0)",
+      "√2 = a/b − 6",
+      "√2 = (a − 6b) / b",
+      "Since a, b are integers, (a − 6b)/b is rational ⟹ √2 is rational",
+      "Contradicts that √2 is irrational",
+      "Hence, 6 + √2 is irrational"
+    ],
+    teachingApproach: "Final reinforcement of isolating the radical.",
+    commonPitfalls: "Forgetting to write the common denominator step: (a - 6b)/b.",
+    orderIndex: 20
+  }
+];
+
+module.exports = exercisesData;
