@@ -1,7 +1,12 @@
-// server/utils/emailService.js
+let nodemailer;
+try {
+  nodemailer = require('nodemailer');
+} catch (e) {
+  // Optional fallback
+}
 
 /**
- * Sends a real 6-digit OTP email using Resend, Brevo, or Dev Preview
+ * Sends a real 6-digit OTP email using Gmail SMTP, Resend, or Dev Preview
  * @param {string} toEmail 
  * @param {string} otp 
  * @param {string} teacherName 
@@ -56,7 +61,32 @@ async function sendOtpEmail(toEmail, otp, teacherName = 'Teacher') {
   console.log(`[EMAIL SERVICE] Verification OTP for ${toEmail}: >>> ${otp} <<<`);
   console.log('============================================================\n');
 
-  // Option 1: Send via Resend REST API (if RESEND_API_KEY is configured)
+  // Option 1: Send via Gmail SMTP (Nodemailer) - Works for ANY recipient email in the world!
+  if (nodemailer && process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.GMAIL_USER.trim(),
+          pass: process.env.GMAIL_APP_PASSWORD.trim().replace(/\s+/g, ''),
+        },
+      });
+
+      await transporter.sendMail({
+        from: `"MathMentor AP" <${process.env.GMAIL_USER.trim()}>`,
+        to: toEmail,
+        subject,
+        html: htmlContent,
+      });
+
+      console.log(`[Gmail SMTP] Real email successfully delivered to ${toEmail}!`);
+      return { success: true, provider: 'gmail' };
+    } catch (gmailErr) {
+      console.error('[Gmail SMTP Error]:', gmailErr.message);
+    }
+  }
+
+  // Option 2: Send via Resend REST API (if RESEND_API_KEY is configured)
   if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY.startsWith('re_')) {
     try {
       const res = await fetch('https://api.resend.com/emails', {
